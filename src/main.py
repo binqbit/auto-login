@@ -30,6 +30,8 @@ def get_param(name):
                 return value
     return None
 
+before_wait = float(get_param("--before-wait") or "0.0")
+
 cmd = get_param("--cmd")
 cmd_wait = float(get_param("--cmd-wait") or "0.3")
 
@@ -43,7 +45,7 @@ password_from_name = PASSWORDS.get(password)
 if password_from_name:
     password = password_from_name
 
-time.sleep(0.1)
+time.sleep(before_wait)
 
 if cmd:
     pyautogui.typewrite(cmd)

@@ -14,6 +14,13 @@ pip install -r requirements.txt
 - `--login`: Your login. `Optional`
 - `--password`: Your password or password name in the keyring. `Optional`
 
+### Additional Parameters For The Wait
+You can add the waiting time before or after the command, to better coordinate the performance of the commands, taking into account the delays.
+- `--before-wait`: The time to wait before entering the login. `Optional`
+- `--cmd-wait`: The time to wait after entering the command. `Optional`
+- `--login-wait`: The time to wait after entering the login. `Optional`
+- `--password-wait`: The time to wait after entering the password. `Optional`
+
 ### Keyring
 - Create `.env` file in the root directory.
 - Add the following lines to the file:
